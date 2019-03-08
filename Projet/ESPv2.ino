@@ -25,12 +25,12 @@
  * */
 
 #define FIREBASE_HOST "https://smarthouse-232d7.firebaseio.com/"
-#define FIREBASE_AUTH "k2vmG5QPNQ8glM51fEhj0j5AXhIiCTxfd1JhqFW6"
+#define FIREBASE_AUTH "xxx"
 
-//#define WIFI_SSID "Galaxy S9"
-//#define WIFI_PASSWORD "motdepasse"
-#define WIFI_SSID "SFR_CC18"
-#define WIFI_PASSWORD "#}hrM&tjS8JZ"
+//#define WIFI_SSID "xx S9"
+//#define WIFI_PASSWORD "xx"
+#define WIFI_SSID "xx"
+#define WIFI_PASSWORD "xx"
 
 
 
@@ -55,8 +55,8 @@ int gForce = 0;
 int bForce = 0;
 
 
-const String key = "key=AAAAJMkBEtc:APA91bEtbAyxDJByr0S3oDgafQR4HxNJFku2AbRmNtd1YZxH9YMDRi9Fc0JRIME81-w31JXJ32hHgfqklRkNrR0qA_nC01muQw7la1hLzz7QMV78zNJ6QY_JZACJIfvBIo-FyUcs-2ax";
-const String contentNotifDebut = "{\"to\":\"fcPUVOBz7B8:APA91bHuenZjKuk-KSN84vPsaXgWmy81AxfbY8_bmqzTVMRbj0V8w-aNCWt3xrq2ycWsd869U4zNSu7R24RU3vPgThNid8UOfXPbfi6JuImIqrnIp7taSt9uhM2pHWz91oRjWEq1eu81\",\"notification\":{\"body\":\"";
+const String key = "key=xxxx";
+const String contentNotifDebut = "{\"to\":\"xxxx",\"notification\":{\"body\":\"";
 const String contentNotifFin = "\"},\"priority\":\"high\",\"sound\":\"default\"}";
 
 boolean sonetteStatus = true;
