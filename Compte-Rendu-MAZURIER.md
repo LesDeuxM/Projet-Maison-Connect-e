@@ -73,3 +73,13 @@ Durant cette séance, j'ai travaillé sur la communication entre l'ESP 32 et l'A
 J'ai consacré l'autre partie de la séance à faire que l'on reçoive une notification (même lorsque l'application est fermée) sur notre téléphone lorsqu'un un des évènements suivant est detecté : Appuie sur la sonette, detection ouverture de porte/fenetre, detection de pluie, de mouvement. Pour se faire, j'utilise encore Firebase qui propose un outil de "Cloud messaging" et qui permet, avec une simple requete HTTP (envoyée par l'ESP), d'envoyer une notification avec le contenu que l'on souhaite sur notre Smartphone.
 
 J'ai aussi ajouté dans l'application android un carré de prévisualisation de la couleur que l'on choisit avec les barres RGB (pour controlet la LED RGB du salon).
+
+# Dernière Séance (6 Mars 2019)
+Durant cette séance, j'ai réalisé différentes taches :
+- Finalisation de l'application, et de son design (voir Capture d'écran) : Mise en block des catégorie (chauffage, lumière, activation des alarmes concernant la pluie, le detecteur de mvt, d'effraction et la sonette). Chaque catégorie possède une icone et l'icone de la catégorie lumière salon change de couleur en fonction de la couleur que l'on renseigne avec les barres R, G, B.
+![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Application%20Finale.jpg?raw=true "Capture d'écran application finale")
+
+- Finalisation du code de l'ESP : Tous les composants fonctionnnent ensemble, toutes les receptions de notifications sur le téléphone fonctionnent.
+- Concernant la porte : encore des difficultés dans l'établissement de la connexion ESP/Arduino : Faire fonctionner les librairies SoftwareSerial et Servo en même temps sur l'Arduino s'est avéré compliqué. Nous avons enfin réasolu ce soucis le lendemainn, en mettant le Servo en PWM9 et le RX en PWM3
+- Concernant la maison en elle même : Nous avons collé les plaques de bois entre elles (elles tenaient jusqu'à présent grace à des bouts de scotch pas très estétique mais pratique dans le cas où nous aurions eu besoin de la redémonter pour faire un trou ou autre par exemple.
+
