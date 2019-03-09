@@ -33,8 +33,8 @@ https://drive.google.com/open?id=1RcVH9dT-0l4eX9bJahoKkkDsa0AhNvdw
 
 # Séance du 18 Janvier 2019 (Séance #4)
 Lors de cette séance nous nous sommes tout d'abord rendu au Fablab avec les planches de bois d'épaisseur 5mm pour construire notre maquette à la découpeuse laser. Vu que les planches n'étaient pas à la bonne dimension pour la découpeuse laser, on a utilisé une scie sauteuse pour les mettre aux bonne dimensions. Une fois les plances découpées, il a fallu attendre que la découpeuse face le travail.
-![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/decoupeuse%20laser.jpg?raw=true "Problème de delay")
-![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Scie%20sauteuse.jpg?raw=true "Problème de delay")
+![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/decoupeuse%20laser.jpg?raw=true)
+![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Scie%20sauteuse.jpg?raw=true)
 J'ai pendant ce temps modifié le code permettant l'affichage au choix d'un ou 3 curseurs pour la couleur de la LED RGB du salon. La partie XML du code est faite (partie XML : ensembles des déclarations des boutons, switch etc dans l'appli Android), il ne manque plus qu'à faire que le switch affiche en fonction du choix 1 ou 3 curseurs, dans la partie code Java de l'appli. Je finaliserai ceci dans les prochains jours.
 
 Une fois la maison assemblée, nous nous sommes rendu compte qu'une pièce était trop petite. Nous avons donc utilisé les bords laissés par la découpeuse, et collé avec de la colle et du scotch pour allonger la pièce, sauf que ça la rendait maintenant un peu trop grande. Nous avons donc raccourci les bords avec une lime.
@@ -49,7 +49,8 @@ J'ai donc dû recréer \* une application Android qui cette fois modifie les val
 \* Recréer une application : L'ancienne application avait été écrite sur Android Studio (interpreteur Java adapté au développement d'applications Android) avec pour base un code qui établissait la connexion Bluetooth entre le Smartphone et l'Arduino. La nouvelle application a elle été écrite de A à Z, reprenant les fonctions principales de l'ancienne. Cette fois, plutôt que d'envoyer les infos par Bluetooth à l'Arduino, on modifie les variables contenues dans la base de donnée FireBase. Parmis les avantages : On peut "communiquer" avec la maison de n'importe où, il suffit d'une connexion Internet. De plus, l'application se lance directement, plus besoin de passer par une page permettant de choisir avec quel module Bluetooth on souhaitait communiquer, l'appli se connecte toute seule à la base de donnée, et est donc opérationnelle dès son lancement.
 Ci dessous un schéma montrant le nouveau moyen de communication mis en oeuvre :
 
-![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Schema%20changement%20application.jpg?raw=true "Schema changement d'appli")
+<img src="./Annexe/Schema%20changement%20application.jpg" alt = "Schema changement d'appli" width="300"/>
+
 
 # Séance du 13 Février 2019 (Séance #6)
 Durant cette séance, j'ai travaillé principalement sur le module Wifi ESP32. Le but était que l'ESP puisse récupérer les valeurs stockées dans la base de donnée FireBase. Après un certain temps de recherche, j'ai trouvé une librairie qui permet de faire communiquer l'ESP et la base de donnée. (https://github.com/ioxhop/IOXhop_FirebaseESP32).
@@ -77,7 +78,7 @@ J'ai aussi ajouté dans l'application android un carré de prévisualisation de 
 # Dernière Séance (6 Mars 2019)
 Durant cette séance, j'ai réalisé différentes taches :
 - Finalisation de l'application, et de son design (voir Capture d'écran) : Mise en block des catégorie (chauffage, lumière, activation des alarmes concernant la pluie, le detecteur de mvt, d'effraction et la sonette). Chaque catégorie possède une icone et l'icone de la catégorie lumière salon change de couleur en fonction de la couleur que l'on renseigne avec les barres R, G, B.
-![alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Application%20Finale.jpg?raw=true "Capture d'écran application finale")
+<img src="./Annexe/Application%20Finale.jpg" width="300"/>
 
 - Finalisation du code de l'ESP : Tous les composants fonctionnnent ensemble, toutes les receptions de notifications sur le téléphone fonctionnent.
 - Concernant la porte : encore des difficultés dans l'établissement de la connexion ESP/Arduino : Faire fonctionner les librairies SoftwareSerial et Servo en même temps sur l'Arduino s'est avéré compliqué. Nous avons enfin réasolu ce soucis le lendemainn, en mettant le Servo en PWM9 et le RX en PWM3
