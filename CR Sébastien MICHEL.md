@@ -63,6 +63,7 @@ A la fin de la séance j'ai paramétré et codé le programme pour le digicode q
 
 ![Alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Digicode.jpg?raw=true "Digicode")
 
+
 # Séance du 06 Fevrier 2019 (Séance #5)
 
 Maintenant que la majorité des modules fonctionnent et que la maquette est finie, on a décidé de tout installer sur la maquette. 
@@ -74,6 +75,7 @@ Ensuite j'ai fabriqué le système de detection d'ouverture de la porte et de la
 ![Alt text](https://github.com/LesDeuxM/Projet-Maison-Connectee/blob/master/Annexe/Fermeture.jpg?raw=true "Fermeture")
 
 S'en suit l'instalation du digicode ainsi que la réalisation de tous les trous qui vont avec pour faire passer les fils jusque dans le toit où se trouve la carte Arduino.
+
 
 # Séance du 13 Fevrier 2019 (Séance #6)
 
@@ -87,9 +89,19 @@ Une fois les soudures faites, il a fallu les placer et les couvrir de scotch pou
 
 Les modules sont donc tous branchés, et il va falloir tester si tout fonctionne ensemble avec les nouveaux branchements.
 
+
 # Séance du 27 Fevrier 2019 (Séance #7)
 
 Maintenant que les modules sont branchés, je les ai éssayé un par un séparement pour verifier que les branchements étaient bons. J'ai rencontré un problème avec le digicode dont la matrice dépend des branchements, elle était donc inversée. C'est à dire que les touches ne renvoyaient pas le bon chiffre. J'ai dû modifier le code pour trouver le bon ordre des pins. 
 Le deuxième soucis que j'ai rencontré est avec la détéction d'ouverture de la porte. En effet, deux plaques métaliques sont sensées rentrer en contact lorsque la porte est fermée, or la porte ferme mal et s'ouvre légérement dès qu'on la lache. IL a donc fallu trouver un moyen de la bloquer légérement lorsque qu'elle est totalement fermée.
 
 Ensuite j'ai essayé de faire fonctionner le capteur de température que servira à faire un "thermostat" pour la maison, et ainsi modifier le chauffage caractérisé par une LED rouge. J'ai d'ailleurs découpé dans du PVC semi transparent ce qui représentera le radiateur. Malheureusement la plaque de PVC semble trop épaisse et les variations d'intensité de la LED ne se voient que très légérement, il va donc falloir que j'essaie une autre méthode.
+
+
+# Séance du 6 Mars 2019 (Séance #8)
+
+Pour la dernière séance il a fallu finir tout ce qu'on avait laisé en état de test. C'est à dire qu'il a fallu coller les murs de la maison entre eux, définir les bon pins et brancher tous les composants ensemble. 
+
+Une fois cela fait j'ai codé le programme qui permet de décoder le message envoyé depuis l'ESP à l'Arduino. Malheureusement sur la carte que nous utilisions, une MEGA, nous n'avons pas réussi à faire fonctionner la transmission de données. Nous avons donc essayé avec une UNO, mais là aussi il y a eu un gros problème de transmission que nous avons enfin réussi à résoudre en changeant le servo de Pin car il intérférait avec la liaison RX-TX de l'ESP. 
+
+Maintenant que la liaison marche, nous avons fini de faire correspondre le code de l'Arduino avec les messages envoyés par l'application via l'ESP.
